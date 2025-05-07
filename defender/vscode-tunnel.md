@@ -1,3 +1,4 @@
+```
 DeviceProcessEvents
 | where (( FileName has "code.exe" or InitiatingProcessVersionInfoInternalFileName has "electron.exe") and ProcessCommandLine contains " tunnel" ) or FileName has "code-tunnel.exe"
 | where ProcessCommandLine contains "--name "
@@ -11,3 +12,4 @@ DeviceProcessEvents
 // *.tunnels.api.visualstudio.com
 // Users testing their tunnel
 // https://vscode.dev/tunnel/
+```
