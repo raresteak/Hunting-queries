@@ -1,3 +1,4 @@
+```
 DeviceEvents
 | where ActionType has "ScheduledTaskCreated"
 //| where InitiatingProcessAccountName !endswith "$"
@@ -11,3 +12,4 @@ DeviceEvents
 | extend arguments = split(AdditionalFields,",")[-2]
 | project Timestamp, DeviceName, TaskName, UserName, command, arguments, AdditionalFields
 | sort by Timestamp desc 
+```
